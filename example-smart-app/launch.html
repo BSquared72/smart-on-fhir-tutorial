@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" hidden>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
+    <link rel='stylesheet' type='text/css' href='./css/cchs-cs-launch-core.css'>
     <!--
-      Temporarily disable cerner-smart-embeddable-lib
-      <link rel='stylesheet' type='text/css' href='./lib/css/cerner-smart-embeddable-lib-1.0.0.min.css'>
-    -->
-    <title>Example-SMART-App</title>
+      Temporarily disable cerner-smart-embeddable-lib-->
+      <link rel='stylesheet' type='text/css' href='./css/cerner-smart-embeddable-lib-1.0.0.min.css'>
+
+    <title>Quick View</title>
   </head>
   <body>
     <!-- Required JS files to enable this page to embed within an MPage -->
     <!--
-      Temporarily disable cerner-smart-embeddable-lib
+      Temporarily disable cerner-smart-embeddable-lib -->
       <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'></script>
-      <script src='./lib/js/cerner-smart-embeddable-lib-1.0.0.min.js'></script>
-    -->
+      <script src='./lib/cerner-smart-embeddable-lib-1.0.0.min.js'></script>
+    
 
     <!-- FHIR Client JS Library -->
-    <script src='./lib/js/fhir-client-v0.1.12.js'></script>
+    <script src='./lib/fhir-client-v0.1.12.js'></script>
 
     <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
-    <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
+    <script src='./lib/fhir-client-cerner-additions-1.0.0.js'></script>
     <script>
       FHIR.oauth2.authorize({
-        'client_id': 'c1f4555a-16e6-47a1-8498-08612cbcc7cc',
-        'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile'
+        'client_id': '091fac6d-9042-431e-957a-0121a34b4c31',
+        'scope':  'user/Practitioner.read user/MedicationStatement.read user/MedicationStatement.write user/Patient.read user/Patient.write user/Observation.read patient/MedicationStatement.read patient/MedicationStatement.write patient/Patient.read patient/Patient.write patient/Observation.read launch online_access openid profile'
       });
     </script>
     <div class="spinner">
